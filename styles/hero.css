@@ -1,0 +1,81 @@
+.hero-main-container{
+    width:  100dvw;
+    height: 100dvh;
+    background: radial-gradient(
+        circle,
+        rgba(243, 206, 206, 0.3) 0%,
+        rgba(214, 56, 61, 0.54) 40%,
+
+        rgba(201, 40, 45, 1) 90%,
+        rgba(0,0,0,0.3)100%
+), #dd1818;
+}
+
+.hero-logo-container{
+    width:  100%;
+    display:flex;
+    height: 10%;
+    justify-content: center;
+    padding-top: 1.4%;
+}
+.logo {
+    height: 100%;
+    width: auto;
+}
+
+.hero-center-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+.text-container{
+    width: 38%;
+}
+.left-text {
+    font-family: 'Chivo', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 5.5rem);
+    color: #F5E3C5;
+
+    text-align: right;
+}
+.right-text {
+    font-family: 'Billion', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 6.5rem);
+    color: #FF9030;
+}
+.smash-img {
+    display: inline;
+    height: 1.5em; /* Ajusta para que coincida con el tamaño del texto */
+    width: auto;
+    vertical-align: middle; /* Alineación vertical */
+}
+.hero-description-container{
+    display:flex;
+    height: 10%;
+    justify-content: center;
+}
+.hero-description-text{
+    font-family: 'Chivo', sans-serif;
+    max-width: 70%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #F5E3C5;
+}
+.hero-dock-container{
+    position:relative;
+    top: 10%;
+}
+.hero-dock-text{
+    font-family: 'Chivo', sans-serif;
+    font-size: 1rem;
+    color: #F5E3C5;
+}
+
+@media (max-width: 767px){
+    .hero-dock-container{
+        position:absolute;
+        top: auto;
+        left: 5%;
+    }
+}
