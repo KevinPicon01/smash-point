@@ -16,7 +16,7 @@ export function FloatingDockD() {
             icon: (
                 <FaHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "#Home",
         },
 
         {
@@ -24,14 +24,21 @@ export function FloatingDockD() {
             icon: (
                 <img alt="isotipo" src="/assets/images/isotipo.png" className="p-0.5 h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "#About",
         },
         {
             title: "Menu",
             icon: (
                 <PiHamburgerLight className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "#Menu",
+        },
+        {
+            title: "Reseñas",
+            icon: (
+                <MdOutlineRateReview className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#Review",
         },
         {
             title: "Visitanos",
@@ -39,14 +46,7 @@ export function FloatingDockD() {
 
                 <SiGooglemaps className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
-        },
-        {
-            title: "Reseñas",
-            icon: (
-                <MdOutlineRateReview className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
+            href: "#Maps",
         },
 
         {
@@ -65,7 +65,7 @@ export function FloatingDockD() {
         },
     ];
     return (
-        <div className="flex items-center justify-center w-full">
+        <div className="hero-dock-container flex items-center justify-center w-full">
             <FloatingDock
                 mobileClassName="translate-y-20" // only for demo, remove for production
                 items={links}

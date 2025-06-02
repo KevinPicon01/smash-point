@@ -1,10 +1,273 @@
+"use client"
 import Hero from "@/components/hero";
-
+import { gsap, ScrollTrigger, registerGSAPPlugins } from "../lib/utils";
+import {useEffect, useLayoutEffect} from "react";
+import AboutUs from "@/components/aboutUs";
+import Menu from "@/components/menu";
+import {FloatingDockD} from "@/components/floatingDock";
+registerGSAPPlugins();
 
 export default function Home() {
+    useEffect(() => {
+
+        const raf = requestAnimationFrame(() => {
+            {
+                //Hero-about
+
+                gsap.to(".hero-description-container", {
+                    scrollTrigger: {
+                        trigger: ".hero-main-container",
+                        start: "0vh top",
+                        endTrigger: "#About",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    y: "300%",
+                });
+                gsap.to(".left-text", {
+                    scrollTrigger: {
+                        trigger: ".hero-main-container",
+                        start: "0vh top",
+                        endTrigger: "#About",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    x: "-150%",
+                });
+                gsap.to(".right-text", {
+                    scrollTrigger: {
+                        trigger: ".hero-main-container",
+                        start: "0vh top",
+                        endTrigger: "#About",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    x: "150%",
+                });
+
+
+                gsap.fromTo(".aboutUs-container", { opacity: 0 }, {
+                    opacity: 1,
+                    immediateRender: false,
+                    scrollTrigger: {
+                        trigger: ".hero-main-container",
+                        start: "30vh top",
+                        endTrigger: "#About",
+                        end: "top top",
+                        scrub: 1,
+                    }
+                });
+                gsap.to(".bot", {
+                    scrollTrigger: {
+                        trigger: ".hero-main-container",
+                        start: "0vh top",
+                        endTrigger: "#About",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    bottom: "30%",
+                    top: "70%",
+                    scale: 1.5,
+                });
+                gsap.to(".top", {
+                    scrollTrigger: {
+                        trigger: ".hero-main-container",
+                        start: "0vh top",
+                        endTrigger: "#About",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    top: "38%",
+                    scale: 1.5 ,
+                });
+            } // Hero to About
+            {
+                //About - Menu
+                gsap.fromTo(".aboutUs-container", { opacity: 1, scale: 1 }, {
+                    opacity: 0,
+                    scale: 0,
+                    immediateRender: false,
+                    scrollTrigger: {
+                        trigger: "#About",
+                        start: "top top",
+                        endTrigger: "#Menu",
+                        end: "top top",
+                        scrub: 1,
+                        invalidateOnRefresh: true
+                    }
+                });
+                gsap.to(".bot",{
+                    scrollTrigger: {
+                        trigger: "#About",
+                        start: "5% top",
+                        endTrigger: "#Menu",
+                        end: "top top",
+                        scrub: 1,
+                        invalidateOnRefresh: true
+                    },
+                    top: "55%",
+                    left: "25%",
+                    immediateRender: false,
+                });
+                gsap.to(".top", {
+                    scrollTrigger: {
+                        trigger: "#About",
+                        start: "5% top",
+                        endTrigger: "#Menu",
+                        end: "top top",
+                        scrub: 1,
+                        invalidateOnRefresh: true
+                    },
+                    top: "45%",
+                    left: "25%",
+                    immediateRender: false,
+                });
+                gsap.to(".menu-main-container", {
+                    scrollTrigger: {
+                        trigger: "#About",
+                        start: "5% top",
+                        endTrigger: "#Menu",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    top: "15%",
+                    bottom: "-3%",
+                });
+                gsap.to(".hero-dock-container", {
+                    scrollTrigger: {
+                        trigger: "#About",
+                        start: "5% top",
+                        endTrigger: "#Menu",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    right: "20%",
+                });
+            } // About to Menu
+            {
+                // Menu - Review
+                gsap.fromTo(".hero-dock-container",{ right: "20%"},{
+                    scrollTrigger: {
+                        trigger: "#Menu",
+                        start: "15% top",
+                        endTrigger: "#Review",
+                        end: "top top",
+                        scrub: 1,
+                        invalidateOnRefresh: true
+                    },
+
+                    immediateRender: false,
+                    right : "0%",
+                })
+                gsap.to(".top", {
+                    immediateRender: false,
+                    scrollTrigger: {
+                        trigger: "#Menu",
+                        start: "15% top",
+                        endTrigger: "#Review",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    rotate: -90,
+                    top: "55%",
+                    bottom: "30%",
+
+                    transform: "translateX(-50%) translateY(0%)",
+                });
+                gsap.fromTo(".bot", {
+                    top: "55%",
+                    left: "25%"
+                }, {
+                    immediateRender: false,
+                    scrollTrigger: {
+                        trigger: "#Menu",
+                        start: "15% top",
+                        endTrigger: "#Review",
+                        end: "top top",
+                        scrub: 1,
+                        invalidateOnRefresh: true
+                    },
+                    left: "80%",
+                    top: "55%",
+
+                    bottom: "30%",
+                    rotate: -90,
+                });
+
+
+                gsap.fromTo(".menu-main-container", {
+                    bottom: "-3%",
+                    top:"15%"
+                },{
+
+                    immediateRender: false,
+                    scrollTrigger: {
+                        trigger: "#Menu",
+                        start: "15% top",
+                        endTrigger: "#Review",
+                        end: "top top",
+                        scrub: 1,
+                    },
+                    top: "110%",
+                    bottom: "-100%",
+                });
+
+            } // Menu to Review
+            {
+                // Review - Maps
+            } // Review to Maps
+
+            const sectionIds = ["#Home", "#About", "#Menu", "#Review", "#Maps"];
+            const containers = gsap.utils.toArray(".icon-container");
+
+            sectionIds.forEach((id, i) => {
+                const trigger = document.querySelector(id);
+
+                ScrollTrigger.create({
+                    trigger,
+                    start: "top 60%",
+                    end: "bottom 60%",
+                    onEnter: () => activateIcon(i),
+                    onEnterBack: () => activateIcon(i),
+                    scrub: false,
+                });
+            });
+
+            function activateIcon(index) {
+                containers.forEach((el, i) => {
+                    const target = el.querySelector("div");
+                    gsap.to(target, {
+                        backgroundColor: i === index ? "#C9282D" : "#000000",
+                        duration: 0.3,
+                    });
+                });
+            }
+
+            ScrollTrigger.refresh();
+        });
+        return () => cancelAnimationFrame(raf);
+    }, []);
+    useLayoutEffect(() => {
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }, []);
+
   return (
     <div>
-      <Hero/>
+      <Hero />
+        <AboutUs/>
+        <Menu/>
+        <FloatingDockD/>
+
+        <div id="Home" className="white-space"> </div>
+        <div id="About" className="white-space"></div>
+        <div id="Menu" className="white-space"></div>
+        <div id="Review" className="white-space"></div>
+        <div id="Maps" className="white-space"></div>
     </div>
   );
 }

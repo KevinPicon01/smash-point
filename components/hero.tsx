@@ -13,11 +13,9 @@ export default function Hero() {
                     <div className="left-text">BIENVENIDO A </div>
                 </div>
                 <div>
-                    <img  alt="top"
+                    <img className="burger top" alt="top"
                           src="/assets/images/burger/1714054457513.png"/>
-                    <img  alt="mid"
-                          src="/assets/images/burger/1714054488013.png"/>
-                    <img  alt="baja"
+                    <img className="burger bot" alt="baja"
                           src="/assets/images/burger/1714054535711.png"/>
                 </div>
                 <div className="text-container">
@@ -29,9 +27,7 @@ export default function Hero() {
             <div className="hero-description-container">
                 <div className="hero-description-text">Smash Point es tu burger dealer de confianza en Piedecuesta. Hacemos una sola smash burger, enorme, con ingredientes de calidad y sabor real. Nada de inventos. Solo una, pero perfecta.</div>
             </div>
-            <div  className="hero-dock-container">
-                <FloatingDockD/>
-            </div>
+
         </div>
     );
 }

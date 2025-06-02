@@ -1,0 +1,22 @@
+.menu-main-container{
+    position:  fixed;
+    display: flex;
+    background-color: #F5E3C5;
+    width: 35%;
+    aspect-ratio: 0.68;
+    border-radius: 15px;
+    right: 10%;
+    bottom: -100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu{
+    width: 90%;
+    height: 90%;
+    background-image: url("/assets/images/menu.jpg");
+    background-repeat:no-repeat;
+    background-size: contain;
+
+    background-position: center;
+}
