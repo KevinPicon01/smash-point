@@ -78,7 +78,7 @@ export default function Home() {
                             },
                             bottom: "30%",
                             top: "70%",
-                            scale: 1.5,
+                            scale: 1.35,
                         });
                         gsap.to(".top", {
                             scrollTrigger: {
@@ -89,7 +89,7 @@ export default function Home() {
                                 scrub: 1,
                             },
                             top: "38%",
-                            scale: 1.5 ,
+                            scale: 1.35 ,
                         });
                     } // Hero to About
                     {
