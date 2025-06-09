@@ -1,0 +1,88 @@
+
+.maps-main-container{
+    opacity: 0;
+    display: none;
+}
+
+.maps-container{
+    position:  fixed;
+    display: flex;
+    background-color: #F5E3C5;
+    width: 24%;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    left: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.map{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+.maps-title{
+    color: #FF9030;
+    font-size: 2.6dvw;
+    font-family: 'Chivo', sans-serif;
+    position: fixed;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: max-content;
+}
+.maps-dock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 78%;
+    left: 50%;
+    min-width: 60%;
+    height: 15%;
+    max-height: 15%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    background-color: #F5E3C5;
+}
+.maps-dock-container > * {
+    min-height: 0;
+    max-height: 90%;
+}
+.maps-dock-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+    gap: 5px;
+    padding: 7px 0 7px 0;
+}
+.maps-dock-container-div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1%;
+}
+.maps-dock-container h3{
+    color: #C9282D;
+    font-size: 1.4vw;
+    font-family: 'Chivo', sans-serif;
+
+}
+.whatsapp-logo{
+    max-height: 48%;
+    max-width: 48%;
+}
+.maps-list li {
+    font-family: 'Chivo', sans-serif;
+    color: #C9282D;
+    font-size: 1vw;
+}
+.maps-footer{
+    font-family: 'Chivo', sans-serif;
+    color: #C9282D;
+    font-size: 1.1vw;
+}

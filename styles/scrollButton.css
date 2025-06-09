@@ -1,0 +1,56 @@
+/* ScrollButton.css */
+.scroll-container{
+    display: flex;
+    position: fixed;
+    bottom: 10%;
+    right: 2.5%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1000;
+    border-radius: 10%;
+}
+.wpp-button{
+    border-radius: 10%;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    background: #25d366;
+}
+
+.wpp-button.show {
+    opacity: 1;
+    visibility: visible;
+    animation: bounce 2s ease-in-out infinite; /* Aplica la animación */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    40% {
+        transform: translateY(-15px); /* Rebote hacia arriba */
+    }
+    60% {
+        transform: translateY(-7px); /* Rebote pequeño hacia arriba */
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-container {
+        right: 1%;
+        font-size: 16px;
+    }
+    .wpp-button{
+        width: 40px;
+        height: 40px;
+        margin-right: 9px !important;
+    }
+
+}

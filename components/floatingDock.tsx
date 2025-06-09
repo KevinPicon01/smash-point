@@ -54,14 +54,14 @@ export function FloatingDockD() {
             icon: (
                 <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://www.instagram.com/burger.smashpoint?igsh=eGF0cDRhMXNuMmhm&utm_source=qr",
         },
         {
             title: "Whatsapp",
             icon: (
                 <IconBrandWhatsapp className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://api.whatsapp.com/send?phone=573159554304&text=%C2%A1Hola%2C%20Smash%20Point!%20%F0%9F%8D%94%20Quiero%20hacer%20un%20pedido.%20%C2%BFMe%20pueden%20mostrar%20la%20carta%2C%20por%20favor%3F%20%F0%9F%98%8A",
         },
     ];
     return (

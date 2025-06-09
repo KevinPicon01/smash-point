@@ -1,6 +1,6 @@
 .menu-main-container{
     position:  fixed;
-    display: flex;
+    display: none;
     background-color: #F5E3C5;
     width: 35%;
     aspect-ratio: 0.68;

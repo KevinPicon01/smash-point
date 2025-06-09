@@ -42,6 +42,7 @@
 .burger{
     max-width: 30%;
     height:auto;
+    z-index: 999;
 }
 .top {
     position: fixed;
@@ -113,8 +114,19 @@
 
 @media (max-width: 767px){
     .hero-dock-container{
-        position:absolute;
-        top: auto;
-        left: 5%;
+        position:fixed;
+        top: 72%;
+        left: 42%;
     }
+    .hero-center-container{
+        flex-direction: column;
+        justify-content: space-around;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .text-container{
+        width: auto;
+    }
+
 }

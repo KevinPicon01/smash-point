@@ -1,6 +1,5 @@
 "use client"
 import "../styles/hero.css"
-import {FloatingDockD} from "@/components/floatingDock";
 export default function Hero() {
     return (
         <div className="hero-main-container">
@@ -12,12 +11,7 @@ export default function Hero() {
                 <div className="text-container">
                     <div className="left-text">BIENVENIDO A </div>
                 </div>
-                <div>
-                    <img className="burger top" alt="top"
-                          src="/assets/images/burger/1714054457513.png"/>
-                    <img className="burger bot" alt="baja"
-                          src="/assets/images/burger/1714054535711.png"/>
-                </div>
+
                 <div className="text-container">
                     <div className="right-text">
                         The <img src="/assets/images/smash.svg" className="smash-img" alt="Smash"/> Point
