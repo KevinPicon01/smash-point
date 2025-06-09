@@ -333,7 +333,6 @@ export default function Home() {
                     } // Review to Maps
 
                     const sectionIds = ["#Home", "#About", "#Menu", "#Review", "#Maps"];
-                    const containers = gsap.utils.toArray(".icon-container");
 
                     sectionIds.forEach((id, i) => {
                         const trigger = document.querySelector(id);
@@ -348,14 +347,18 @@ export default function Home() {
                         });
                     });
                     function activateIcon(index: number) {
+                        const containers = gsap.utils.toArray<HTMLElement>(".icon-container");
                         containers.forEach((el, i) => {
                             const target = el.querySelector("div");
-                            gsap.to(target, {
-                                backgroundColor: i === index ? "#C9282D" : "#000000",
-                                duration: 0.3,
-                            });
+                            if (target instanceof HTMLElement) {
+                                gsap.to(target, {
+                                    backgroundColor: i === index ? "#C9282D" : "#000000",
+                                    duration: 0.3,
+                                });
+                            }
                         });
                     }
+
                     ScrollTrigger.refresh();
                 });
                 return () => cancelAnimationFrame(raf);
