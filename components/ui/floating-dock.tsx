@@ -62,6 +62,7 @@ const FloatingDockMobile = ({
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
                 <a
+                  aria-label={item.title}
                   href={item.href}
                   key={item.title}
                   target="_blank"
@@ -162,7 +163,8 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href} target={href.startsWith('#') ? undefined : '_blank' } className="icon-container">
+    <a
+        aria-label={title} href={href} target={href.startsWith('#') ? undefined : '_blank' } className="icon-container">
       <motion.div
         ref={ref}
         style={{ width, height }}
