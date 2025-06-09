@@ -27,6 +27,13 @@ export default function Home() {
                                 endTrigger: "#About",
                                 end: "top top",
                                 scrub: 1,
+                                onUpdate: (self: { progress: number }) => {
+                                    const menuContainer = document.querySelector(".menu-main-container") as HTMLElement | null;
+
+                                    if (menuContainer) {
+                                        menuContainer.style.display = self.progress === 1 ? "flex" : "none";
+                                    }
+                                }
                             },
                             y: "300%",
                         });
@@ -97,7 +104,14 @@ export default function Home() {
                                 endTrigger: "#Menu",
                                 end: "top top",
                                 scrub: 1,
-                                invalidateOnRefresh: true
+                                invalidateOnRefresh: true,
+                                onUpdate: (self: { progress: number }) => {
+                                    const reviewContainer = document.querySelector(".review-main-container") as HTMLElement | null;
+
+                                    if (reviewContainer) {
+                                        reviewContainer.style.display = self.progress === 1 ? "block" : "none";
+                                    }
+                                }
                             }
                         });
                         gsap.to(".bot",{
@@ -134,7 +148,6 @@ export default function Home() {
                                 end: "top top",
                                 scrub: 1,
                             },
-                            top: "15%",
                             bottom: "-3%",
                         });
                         gsap.to(".hero-dock-container", {
@@ -157,7 +170,14 @@ export default function Home() {
                                 endTrigger: "#Review",
                                 end: "top top",
                                 scrub: 1,
-                                invalidateOnRefresh: true
+                                invalidateOnRefresh: true,
+                                onUpdate: (self: { progress: number }) => {
+                                    const mapsContainer = document.querySelector(".maps-main-container") as HTMLElement | null;
+
+                                    if (mapsContainer) {
+                                        mapsContainer.style.display = self.progress === 1 ? "block" : "none";
+                                    }
+                                }
                             },
                             immediateRender: false,
                             right : "0%",
@@ -198,7 +218,6 @@ export default function Home() {
                         });
                         gsap.fromTo(".menu-main-container", {
                             bottom: "-3%",
-                            top:"15%"
                         },{
                             immediateRender: false,
                             scrollTrigger: {
@@ -208,7 +227,6 @@ export default function Home() {
                                 end: "top top",
                                 scrub: 1,
                             },
-                            top: "110%",
                             bottom: "-100%",
                         });
                         gsap.to(".infinite-moving-cards",{
