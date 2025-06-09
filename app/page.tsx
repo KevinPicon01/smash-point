@@ -78,7 +78,7 @@ export default function Home() {
                             },
                             bottom: "30%",
                             top: "70%",
-                            scale: 1.35,
+                            scale: 1.2,
                         });
                         gsap.to(".top", {
                             scrollTrigger: {
@@ -89,7 +89,7 @@ export default function Home() {
                                 scrub: 1,
                             },
                             top: "38%",
-                            scale: 1.35 ,
+                            scale: 1.2 ,
                         });
                     } // Hero to About
                     {
@@ -194,8 +194,6 @@ export default function Home() {
                             rotate: -90,
                             top: "50%",
                             left: "15%",
-                            translateX: "0%",
-                            translateY: "-50%",
                         });
                         gsap.fromTo(".bot", {
                             top: "55%",
@@ -210,11 +208,9 @@ export default function Home() {
                                 scrub: 1,
                                 invalidateOnRefresh: true
                             },
-                            left: "85%",
-                            top: "50%",
-                            translateX: "0%",
-                            translateY: "-50%",
                             rotate: -90,
+                            top: "50%",
+                            left: "85%",
                         });
                         gsap.fromTo(".menu-main-container", {
                             bottom: "-3%",
