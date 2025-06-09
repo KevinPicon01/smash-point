@@ -280,8 +280,6 @@ export default function Home() {
                         gsap.fromTo(".bot", {
                             top: "50%",
                             left: "85%",
-                            translateX: "0%",
-                            translateY: "-50%",
                             rotate: -90,
                         }, {
                             immediateRender: false,
