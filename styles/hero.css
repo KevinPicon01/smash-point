@@ -1,77 +1,37 @@
 .hero-main-container{
-    position: fixed;
-    width:  100dvw;
-    height: 100dvh;
-    background: radial-gradient(
-        circle,
-        rgba(243, 206, 206, 0.3) 0%,
-        rgba(214, 56, 61, 0.54) 40%,
-
-        rgba(201, 40, 45, 1) 90%,
-        rgba(0,0,0,0.3)100%
-), #dd1818;
+    position: absolute;
 }
-
-.hero-logo-container{
-    width:  100%;
-    display:flex;
-    height: 10%;
-    max-height: 10%;
-    min-height: 10%;
-    justify-content: center;
-    padding-top: 1.4%;
-}
-.logo {
-    height: 100%;
-    width: auto;
-}
-
 .hero-center-container{
-    display:flex;
+    display: flex;
     align-items: center;
-    height: 60%;
-    width: 80%;
-    max-height: 60%;
-    max-width: 80%;
-    min-width: 80%;
-    position: fixed;
-    top: 10%;
-    left: 10%;
-    justify-content: space-between;
 }
-.burger{
-    max-width: 30%;
-    height:auto;
+.left-text {
+    font-family: 'Chivo', sans-serif;
+    font-size: clamp(1.79rem, 3vw, 5.5rem);
+    color: #F5E3C5;
+    text-align: right;
+}
+.right-text {
+    font-family: 'Billion', sans-serif;
+    font-size: clamp(1.79rem, 4vw, 6.5rem);
+    color: #FF9030;
+}
+.burger {
+    max-width: 20%;
+    height: auto;
     z-index: 999;
 }
 .top {
     position: fixed;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%) ;
-    top: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 33%;
 }
-
 .bot {
     position: fixed;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%) ;
-    top: 40%;
-}
-
-.text-container{
-    width: 33%;
-}
-.left-text {
-    font-family: 'Chivo', sans-serif;
-    font-size: clamp(1.5rem, 3vw, 5.5rem);
-    color: #F5E3C5;
-
-    text-align: right;
-}
-.right-text {
-    font-family: 'Billion', sans-serif;
-    font-size: clamp(1.5rem, 4vw, 6.5rem);
-    color: #FF9030;
+    transform: translateX(-50%) translateY(50%);
+    top: 34%;
 }
 .smash-img {
     display: inline;
@@ -79,20 +39,30 @@
     width: auto;
     vertical-align: middle; /* Alineación vertical */
 }
+.hero-logo-container {
+    width: 100%;
+    display: flex;
+    height: 10%;
+    max-height: 10%;
+    min-height: 10%;
+    justify-content: center;
+    padding-top: 1.4%;
+
+}
+.logo {
+    height: 100%;
+    width: auto;
+
+}
 .hero-description-container{
-    display:flex;
+    display: flex;
     height: 15%;
     justify-content: center;
-    position: fixed;
-    width: 80%;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
 }
-.hero-description-text{
+.hero-description-text {
     font-family: 'Chivo', sans-serif;
     text-align: center;
-    font-size: clamp(12px, 2vw, 24px);
+    font-size: clamp(12px, 1vw, 15px);
     color: #F5E3C5;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -101,22 +71,66 @@
     max-width: 100%;
     max-height: 100%;
 }
-.hero-dock-container{
-    position:fixed;
-    bottom: 5%;
-    z-index: 9999;
-}
-.hero-dock-text{
-    font-family: 'Chivo', sans-serif;
-    font-size: 1rem;
-    color: #F5E3C5;
-}
+@media (min-width: 767px) {
+    .hero-main-container {
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
 
+    }
+
+    .hero-center-container {
+        height: 60%;
+        width: 80%;
+        max-height: 60%;
+        max-width: 80%;
+        min-width: 80%;
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        justify-content: space-between;
+    }
+
+    .text-container {
+        width: 33%;
+    }
+
+    .hero-description-container {
+        position: fixed;
+        width: 80%;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+
+    .hero-dock-container {
+        position: fixed;
+        bottom: 5%;
+        z-index: 9999;
+    }
+
+    .hero-dock-text {
+        font-family: 'Chivo', sans-serif;
+        font-size: 1rem;
+        color: #F5E3C5;
+    }
+}
 @media (max-width: 767px){
     .hero-dock-container{
         position:fixed;
         top: 72%;
         left: 42%;
+        z-index: 9999;
+    }
+    .hero-main-container{
+        position: static;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-end;
+
     }
     .hero-center-container{
         flex-direction: column;
@@ -124,9 +138,34 @@
         left: 0;
         width: 100%;
         max-width: 100%;
+        height: 64%;
+        margin-top: 10%;
+        position:  static;
+    }
+
+    .hero-description-container{
+        position: static;
+        width: 100%;
     }
     .text-container{
         width: auto;
     }
-
+    .right-text {
+        height: 10%;
+    }
+    .hero-logo-container{
+        max-height: 10%;
+        position: fixed;
+        z-index: 11;
+    }
+    .burger{
+        width: 35%;
+        max-width: 45%;
+    }
+    .top{
+        top: 38%;
+    }
+    .bot{
+        top: 39%;
+    }
 }

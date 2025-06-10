@@ -8,6 +8,7 @@ import {FloatingDockD} from "@/components/floatingDock";
 import {InfiniteMovingCardsDemo} from "@/components/infinityCards";
 import Maps from "@/components/maps";
 import ScrollButton from "@/components/scrollButton";
+import ThemeToggle from "@/components/ThemeToggle";
 registerGSAPPlugins();
 
 export default function Home() {
@@ -68,18 +69,7 @@ export default function Home() {
                                 scrub: 1,
                             }
                         });
-                        gsap.to(".bot", {
-                            scrollTrigger: {
-                                trigger: ".hero-main-container",
-                                start: "0vh top",
-                                endTrigger: "#About",
-                                end: "top top",
-                                scrub: 1,
-                            },
-                            bottom: "30%",
-                            top: "70%",
-                            scale: 1.2,
-                        });
+
                         gsap.to(".top", {
                             scrollTrigger: {
                                 trigger: ".hero-main-container",
@@ -88,8 +78,19 @@ export default function Home() {
                                 end: "top top",
                                 scrub: 1,
                             },
-                            top: "38%",
+                            top: "30%",
                             scale: 1.2 ,
+                        });
+                        gsap.to(".bot", {
+                            scrollTrigger: {
+                                trigger: ".hero-main-container",
+                                start: "0vh top",
+                                endTrigger: "#About",
+                                end: "top top",
+                                scrub: 1,
+                            },
+                            top: "65%",
+                            scale: 1.2,
                         });
                     } // Hero to About
                     {
@@ -114,19 +115,6 @@ export default function Home() {
                                 }
                             }
                         });
-                        gsap.to(".bot",{
-                            scrollTrigger: {
-                                trigger: "#About",
-                                start: "5% top",
-                                endTrigger: "#Menu",
-                                end: "top top",
-                                scrub: 1,
-                                invalidateOnRefresh: true
-                            },
-                            top: "55%",
-                            left: "25%",
-                            immediateRender: false,
-                        });
                         gsap.to(".top", {
                             scrollTrigger: {
                                 trigger: "#About",
@@ -136,7 +124,20 @@ export default function Home() {
                                 scrub: 1,
                                 invalidateOnRefresh: true
                             },
-                            top: "45%",
+                            top: "40%",
+                            left: "25%",
+                            immediateRender: false,
+                        });
+                        gsap.to(".bot",{
+                            scrollTrigger: {
+                                trigger: "#About",
+                                start: "5% top",
+                                endTrigger: "#Menu",
+                                end: "top top",
+                                scrub: 1,
+                                invalidateOnRefresh: true
+                            },
+                            top: "43%",
                             left: "25%",
                             immediateRender: false,
                         });
@@ -182,7 +183,7 @@ export default function Home() {
                             immediateRender: false,
                             right : "0%",
                         })
-                        gsap.to(".top", {
+                        gsap.to(".top",{
                             immediateRender: false,
                             scrollTrigger: {
                                 trigger: "#Menu",
@@ -195,10 +196,7 @@ export default function Home() {
                             top: "50%",
                             left: "15%",
                         });
-                        gsap.fromTo(".bot", {
-                            top: "55%",
-                            left: "25%"
-                        }, {
+                        gsap.to(".bot", {
                             immediateRender: false,
                             scrollTrigger: {
                                 trigger: "#Menu",
@@ -209,7 +207,7 @@ export default function Home() {
                                 invalidateOnRefresh: true
                             },
                             rotate: -90,
-                            top: "50%",
+                            top: "40%",
                             left: "85%",
                         });
                         gsap.fromTo(".menu-main-container", {
@@ -223,7 +221,7 @@ export default function Home() {
                                 end: "top top",
                                 scrub: 1,
                             },
-                            bottom: "-100%",
+                            bottom: "-130%",
                         });
                         gsap.to(".infinite-moving-cards",{
                             immediateRender: false,
@@ -273,15 +271,11 @@ export default function Home() {
                                 end: "top top",
                                 scrub: 1,
                             },
+                            top: "40%",
                             rotate: 0,
-                            top: "35%",
                             left: "70%",
                         });
-                        gsap.fromTo(".bot", {
-                            top: "50%",
-                            left: "85%",
-                            rotate: -90,
-                        }, {
+                        gsap.to(".bot", {
                             immediateRender: false,
                             scrollTrigger: {
                                 trigger: "#Review",
@@ -291,8 +285,8 @@ export default function Home() {
                                 scrub: 1,
                                 invalidateOnRefresh: true
                             },
+                            top: "43%",
                             left: "70%",
-                            top: "55%",
                             rotate: 0,
                         });
                         gsap.to(".infinite-moving-cards",{
@@ -379,6 +373,50 @@ export default function Home() {
             // ❌ Móvil
             "(max-width: 767px)": function () {
                 ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+                const raf = requestAnimationFrame(() => {
+                    gsap.to(".top", {
+                            scrollTrigger: {
+                                trigger: ".hero-main-container",
+                                start: "0vh top",
+                                endTrigger: "#About",
+                                end: "top top",
+                                scrub: 1,
+                            },
+                            top: "23%",
+                            scale: 1.5 ,
+                        });
+                    gsap.to(".bot", {
+                            scrollTrigger: {
+                                trigger: ".hero-main-container",
+                                start: "0vh top",
+                                endTrigger: "#About",
+                                end: "top top",
+                                scrub: 1,
+
+                            },
+                            top: "73%",
+                            scale: 1.5,
+                        });
+                    gsap.to([".screen"],{
+                        scrollTrigger:{
+                            trigger: "#About",
+                            start: "top 80%",
+                            scrub: 1,
+                        },
+                        display: "block"
+                    });
+                    gsap.to([".top-scr"],{
+                        scrollTrigger:{
+                            trigger: "#About",
+                            start: "top 80%",
+                            scrub: 1,
+                        },
+                        display: "block"
+                    })
+                    ScrollTrigger.refresh();
+                });
+                return () => cancelAnimationFrame(raf);
             }
 
         });
@@ -394,31 +432,34 @@ export default function Home() {
     }, []);
 
   return (
-    <div>
-        <div id="Home" className="white-space">
-            <Hero/>
-        </div>
-        <div id="About" className="white-space">
-            <AboutUs/>
-        </div>
-        <div id="Menu" className="white-space">
-            <Menu/>
-        </div>
-        <div id="Review" className="white-space">
-            <InfiniteMovingCardsDemo/>
-        </div>
-        <div id="Maps" className="white-space">
-            <Maps/>
-        </div>
 
-        <div>
-            <img className="burger top" alt="top"
-                 src="/assets/images/burger/1714054457513.png"/>
-            <img className="burger bot" alt="baja"
-                 src="/assets/images/burger/1714054535711.png"/>
-        </div>
-        <FloatingDockD/>
-        <ScrollButton/>
-    </div>
+      <div>
+          <div className="top-scr"/>
+          <div id="Home" className="white-space">
+              <Hero/>
+          </div>
+          <div id="About" className="white-space">
+              <AboutUs/>
+          </div>
+          <div id="Menu" className="white-space">
+              <Menu/>
+          </div>
+          <div id="Review" className="white-space">
+              <InfiniteMovingCardsDemo/>
+          </div>
+          <div id="Maps" className="white-space">
+              <Maps/>
+          </div>
+
+          <div>
+              <img className="burger top" alt="top"
+                   src="/assets/images/burger/1714054457513.png"/>
+              <img className="burger bot" alt="baja"
+                   src="/assets/images/burger/1714054535711.png"/>
+          </div>
+          <div className="screen" ></div>
+          <FloatingDockD/>
+          <ScrollButton/>
+      </div>
   );
 }

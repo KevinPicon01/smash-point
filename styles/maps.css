@@ -1,56 +1,74 @@
 
-.maps-main-container{
-    opacity: 0;
-    display: none;
+
+@media (min-width: 767px){
+    .maps-main-container{
+        opacity: 0;
+        display: none;
+    }
+
+    .maps-container{
+        position:  fixed;
+        width: 20%;
+        top: 45%;
+        transform: translate(-50%,-50%);
+        left: 30%;
+        padding: 10px;
+    }
+    .maps-title{
+        font-size: 2.6dvw;
+        position: fixed;
+        top: 18%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: max-content;
+    }
+    .maps-dock{
+        position: fixed;
+        top: 78%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .maps-dock-container > * {
+        min-height: 0;
+        max-height: 90%;
+    }
+    .maps-dock-container-div{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1%;
+    }
+    .maps-dock-container h3{
+        color: #C9282D;
+        font-size: 1.1vw;
+        font-family: 'Chivo', sans-serif;
+
+    }
+    .whatsapp-logo{
+        max-height: 48%;
+        max-width: 48%;
+    }
+    .maps-list li {
+        font-size: 0.88vw;
+    }
+    .maps-footer{
+        font-family: 'Chivo', sans-serif;
+        color: #C9282D;
+        font-size: 0.9vw;
+    }
+
+}
+.maps-list li {
+    font-family: 'Chivo', sans-serif;
+    font-style: normal;
+    color: #C9282D;
+}
+.maps-dock-container h3{
+    color: #C9282D;
+    font-family: 'Chivo', sans-serif;
 }
 
-.maps-container{
-    position:  fixed;
-    display: flex;
-    background-color: #F5E3C5;
-    width: 24%;
-    aspect-ratio: 1;
-    border-radius: 15px;
-    top: 45%;
-    transform: translate(-50%,-50%);
-    left: 30%;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-.map{
-    border-radius: 15px;
-    width: 100%;
-    height: 100%;
-}
-.maps-title{
-    color: #FF9030;
-    font-size: 2.6dvw;
-    font-family: 'Chivo', sans-serif;
-    position: fixed;
-    top: 18%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: max-content;
-}
-.maps-dock{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    top: 78%;
-    left: 50%;
-    min-width: 60%;
-    height: 15%;
-    max-height: 15%;
-    transform: translate(-50%,-50%);
-    border-radius: 15px;
-    background-color: #F5E3C5;
-}
-.maps-dock-container > * {
-    min-height: 0;
-    max-height: 90%;
-}
 .maps-dock-container{
     display: flex;
     flex-direction: column;
@@ -59,30 +77,58 @@
     gap: 5px;
     padding: 7px 0 7px 0;
 }
-.maps-dock-container-div{
+.maps-dock{
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 60%;
+    height: 15%;
+    max-height: 15%;
+    border-radius: 15px;
+    background-color: #F5E3C5;
+}
+.maps-title{
+    color: #FF9030;
+    font-family: 'Chivo', sans-serif;
+}
+.maps-container{
+    display: flex;
+    background-color: #F5E3C5;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    justify-content: center;
     align-items: center;
-    padding: 1%;
 }
-.maps-dock-container h3{
-    color: #C9282D;
-    font-size: 1.4vw;
-    font-family: 'Chivo', sans-serif;
+.map{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 767px){
+    .maps-list{
+        margin: 10px;
+    }
+    .maps-list li {
+        font-size: 3.3vw;
+    }
+    .maps-footer{
+        display: none;
+    }
+    .maps-dock{
+        width: 90%;
+        padding: 5%;
+        margin: 10%;
+    }
+    .maps-title{
+        font-size: 6.1vw;
+    }
+    .maps-container{
+        max-width: 90%;
+    }
+    .maps-main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-}
-.whatsapp-logo{
-    max-height: 48%;
-    max-width: 48%;
-}
-.maps-list li {
-    font-family: 'Chivo', sans-serif;
-    color: #C9282D;
-    font-size: 1vw;
-}
-.maps-footer{
-    font-family: 'Chivo', sans-serif;
-    color: #C9282D;
-    font-size: 1.1vw;
+    }
 }
