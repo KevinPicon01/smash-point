@@ -10,8 +10,8 @@ export function InfiniteMovingCardsDemo() {
             <div className="infinite-moving-cards">
                 <InfiniteMovingCards
                     items={testimonials}
-                    direction="right"
-                    speed="slow"
+                    direction="left"
+                    speed="fast"
                 />
             </div>
             <a href="https://acortar.link/wy8okL" target="_blank" className="review-button"> Cuentanos tu experiencia </a>

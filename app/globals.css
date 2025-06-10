@@ -29,11 +29,7 @@ body {
 }
 
 
-@media (max-width: 767px){
-  .white-space{
-    height: 80vh;
-  }
-}
+
 .screen{
   position: fixed;
   bottom: 0;

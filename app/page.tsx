@@ -400,7 +400,7 @@ export default function Home() {
                     gsap.to([".screen"],{
                         scrollTrigger:{
                             trigger: "#About",
-                            start: "top 80%",
+                            start: "top 99%",
                             scrub: 1,
                         },
                         display: "block"
@@ -408,7 +408,7 @@ export default function Home() {
                     gsap.to([".top-scr"],{
                         scrollTrigger:{
                             trigger: "#About",
-                            start: "top 80%",
+                            start: "top 90%",
                             scrub: 1,
                         },
                         display: "block"
@@ -437,16 +437,16 @@ export default function Home() {
           <div id="Home" className="white-space">
               <Hero/>
           </div>
-          <div id="About" className="white-space">
+          <div id="About" className="about-mob white-space ">
               <AboutUs/>
           </div>
-          <div id="Menu" className="white-space">
+          <div id="Menu" className="menu-mob white-space ">
               <Menu/>
           </div>
-          <div id="Review" className="white-space">
+          <div id="Review" className="review-mob white-space">
               <InfiniteMovingCardsDemo/>
           </div>
-          <div id="Maps" className="white-space">
+          <div id="Maps" className="white-space ">
               <Maps/>
           </div>
 

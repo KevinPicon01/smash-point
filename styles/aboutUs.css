@@ -43,9 +43,11 @@
 
 }
 @media (max-width: 767px){
-
+    .about-mob{
+        max-height: 70vh;
+    }
     .aboutUs-container{
-        height: 100dvh;
+        height: 100%;
     }
     .aboutUs-text-container{
         height: 50%;
