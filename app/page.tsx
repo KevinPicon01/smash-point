@@ -8,7 +8,6 @@ import {FloatingDockD} from "@/components/floatingDock";
 import {InfiniteMovingCardsDemo} from "@/components/infinityCards";
 import Maps from "@/components/maps";
 import ScrollButton from "@/components/scrollButton";
-import ThemeToggle from "@/components/ThemeToggle";
 registerGSAPPlugins();
 
 export default function Home() {
