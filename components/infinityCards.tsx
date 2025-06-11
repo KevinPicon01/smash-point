@@ -11,7 +11,7 @@ export function InfiniteMovingCardsDemo() {
                 <InfiniteMovingCards
                     items={testimonials}
                     direction="left"
-                    speed="fast"
+                    speed="normal"
                 />
             </div>
             <a href="https://acortar.link/wy8okL" target="_blank" className="review-button"> Cuentanos tu experiencia </a>
