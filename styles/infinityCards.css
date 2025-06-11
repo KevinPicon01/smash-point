@@ -29,7 +29,6 @@
                 font-size: 3.2rem;
         }
         .review-button{
-                border-radius: 20px;
                 font-size: 1dvw;
                 position: fixed;
                 top: 73%;
@@ -52,17 +51,9 @@
         border-radius: 20px;
         font-family: 'Chivo', sans-serif;
         padding: 0.5rem;
-
-
+        z-index: 11;
 }
 
-.review-button:hover{
-        background: #FF9030;
-        cursor: pointer;
-        transform:  translateX(-50%);
-        scale: 1.2;
-
-}
 .review-title{
         color: #FF9030;
         font-family: 'Chivo', sans-serif;
