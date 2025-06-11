@@ -14,7 +14,8 @@ export function InfiniteMovingCardsDemo() {
                     speed="normal"
                 />
             </div>
-            <a href="https://acortar.link/wy8okL" target="_blank" className="review-button"> Cuentanos tu experiencia </a>
+            <a href="https://www.google.com/search?sca_esv=6cf83e9191071241&sxsrf=AE3TifMQu4zrp1GtvDylxhd7fFADJm90Bw:1749681785615&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E51R0U4vLJztIhA6z7xoUeI3IJVyYH7uXHh59R5iE1SLF9njXvfLRBoOIGH365Z6-2KumYG5aX5kHq7rUwGJjD_Q-9f7&q=Smash+Point+Opiniones&sa=X&ved=2ahUKEwiAzLTKuOqNAxWdTjABHdLxAp0Q0bkNegQIQBAD&biw=2560&bih=1305&dpr=1"
+               target="_blank" className="review-button"> Cuentanos tu experiencia </a>
         </div>
     );
 }
