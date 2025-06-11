@@ -2,19 +2,52 @@
 import "../styles/maps.css"
 import { Phone, MapPin} from "lucide-react";
 import {IconBrandInstagram, IconBrandWhatsapp} from "@tabler/icons-react";
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 
 export default function Maps() {
+    const [showMap, setShowMap] = useState(false);
+    const mapRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShowMap(true);
+                    observer.disconnect();
+                }
+            },
+            {
+                rootMargin: "200px", // empieza a cargarlo antes de que se vea
+            }
+        );
+
+        if (mapRef.current) {
+            observer.observe(mapRef.current);
+        }
+
+        return () => {
+            if (mapRef.current) observer.unobserve(mapRef.current);
+        };
+    }, []);
     return (
         <div className="maps-main-container">
 
             <div className="maps-title"> ENCUENTRANOS </div>
-            <div className="maps-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.0915123143195!2d-73.0609881250028!3d6.998504193002696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e68470cdba56ca3%3A0x2e52ae0aebcbf9d!2sSmash%20Point!5e0!3m2!1ses-419!2sco!4v1749160381726!5m2!1ses-419!2sco"
-                    width="800" height="600" loading="lazy"
-                    className="map"
-                    referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <div className="maps-container" ref={mapRef} style={{ minHeight: "300px" }}>
+                {showMap ? (
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.0915123143195!2d-73.0609881250028!3d6.998504193002696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e68470cdba56ca3%3A0x2e52ae0aebcbf9d!2sSmash%20Point!5e0!3m2!1ses-419!2sco!4v1749160381726!5m2!1ses-419!2sco"
+                        width="100%"
+                        height="600"
+                        className="map"
+                        title="google maps"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        style={{ border: 0 }}
+                    />
+                ) : (
+                    <p style={{ textAlign: "center" }}>Cargando mapa…</p>
+                )}
             </div>
             <div  className="maps-dock">
                 <div className="maps-dock-container">

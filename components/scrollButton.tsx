@@ -38,6 +38,7 @@ const ScrollButton = () => {
     return (
         <div className="scroll-container">
             <button
+                title="whatsapp button"
                 className={`wpp-button ${visible ? 'show' : 'show'} ` }
                 onClick={wppClick}
             >

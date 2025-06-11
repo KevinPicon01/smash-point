@@ -36,7 +36,7 @@
 .smash-img {
     display: inline;
     height: 1.5em; /* Ajusta para que coincida con el tamaño del texto */
-    width: auto;
+    width: 3em;
     vertical-align: middle; /* Alineación vertical */
 }
 .hero-logo-container {
@@ -46,14 +46,16 @@
     max-height: 10%;
     min-height: 10%;
     justify-content: center;
-    padding-top: 1.4%;
+    padding-top: 1vh;
 
 }
 .logo {
     height: 100%;
-    width: auto;
+    aspect-ratio: 2 / 3; /* Ancho es la mitad del alto */
 
 }
+
+
 .hero-description-container{
     display: flex;
     height: 15%;
@@ -70,6 +72,7 @@
     word-wrap: break-word;
     max-width: 100%;
     max-height: 100%;
+    padding: 0 20px;
 }
 @media (min-width: 767px) {
     .hero-main-container {
