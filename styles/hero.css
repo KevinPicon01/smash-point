@@ -24,13 +24,13 @@
 .top {
     position: fixed;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%) !important;
     top: 33%;
 }
 .bot {
     position: fixed;
     left: 50%;
-    transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(50%)  !important;
     top: 31.5%;
 }
 .smash-img {
