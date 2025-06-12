@@ -136,7 +136,7 @@ export default function Home() {
                                 scrub: 1,
                                 invalidateOnRefresh: true
                             },
-                            top: "43%",
+                            top: "40%",
                             left: "25%",
                             immediateRender: false,
                         });
@@ -284,7 +284,7 @@ export default function Home() {
                                 scrub: 1,
                                 invalidateOnRefresh: true
                             },
-                            top: "43%",
+                            top: "40%",
                             left: "70%",
                             rotate: 0,
                         });
@@ -451,10 +451,11 @@ export default function Home() {
           </div>
 
           <div>
-              <img className="burger top" alt="top"
-                   src="/assets/images/burger/1714054457513.png"/>
+
               <img className="burger bot" alt="baja"
-                   src="/assets/images/burger/1714054535711.png"/>
+                   src="/assets/images/burger/bot.png"/>
+              <img className="burger top" alt="top"
+                   src="/assets/images/burger/top.png"/>
           </div>
           <div className="screen" ></div>
           <FloatingDockD/>
