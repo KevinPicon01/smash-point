@@ -29,12 +29,12 @@
                 font-size: 3.2rem;
         }
         .review-button{
-                font-size: 1dvw;
+                font-size: 0.8dvw;
                 position: fixed;
                 top: 73%;
                 transform:  translateX(-50%);
                 opacity: 0;
-                padding: 1rem;
+                padding: 1rem 1.5rem;
 
         }
 
@@ -50,7 +50,6 @@
         background: #FF9030;
         border-radius: 20px;
         font-family: 'Chivo', sans-serif;
-        padding: 0.5rem;
         z-index: 9;
 }
 
@@ -64,6 +63,8 @@
                 height: 70vh;
         }
         .review-button{
+
+                padding: 0.5rem;
                 font-size: 3dvw;
         }
         .review-title{

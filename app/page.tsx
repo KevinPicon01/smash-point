@@ -206,7 +206,7 @@ export default function Home() {
                                 invalidateOnRefresh: true
                             },
                             rotate: -90,
-                            top: "40%",
+                            top: "38%",
                             left: "85%",
                         });
                         gsap.fromTo(".menu-main-container", {
@@ -449,7 +449,7 @@ export default function Home() {
           <div id="Maps" className="white-space ">
               <Maps/>
           </div>
-
+          <div className="screen" ></div>
           <div>
 
               <img className="burger bot" alt="baja"
@@ -457,7 +457,7 @@ export default function Home() {
               <img className="burger top" alt="top"
                    src="/assets/images/burger/top.png"/>
           </div>
-          <div className="screen" ></div>
+
           <FloatingDockD/>
           <ScrollButton/>
       </div>
