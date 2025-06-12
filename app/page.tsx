@@ -23,7 +23,7 @@ export default function Home() {
                         gsap.to(".hero-description-container", {
                             scrollTrigger: {
                                 trigger: ".hero-main-container",
-                                start: "0vh top",
+                                start: "1vh top",
                                 endTrigger: "#About",
                                 end: "top top",
                                 scrub: 1,
@@ -40,7 +40,7 @@ export default function Home() {
                         gsap.to(".left-text", {
                             scrollTrigger: {
                                 trigger: ".hero-main-container",
-                                start: "0vh top",
+                                start: "1vh top",
                                 endTrigger: "#About",
                                 end: "top top",
                                 scrub: 1,
@@ -50,7 +50,7 @@ export default function Home() {
                         gsap.to(".right-text", {
                             scrollTrigger: {
                                 trigger: ".hero-main-container",
-                                start: "0vh top",
+                                start: "1vh top",
                                 endTrigger: "#About",
                                 end: "top top",
                                 scrub: 1,
@@ -72,7 +72,7 @@ export default function Home() {
                         gsap.to(".top", {
                             scrollTrigger: {
                                 trigger: ".hero-main-container",
-                                start: "0vh top",
+                                start: "1vh top",
                                 endTrigger: "#About",
                                 end: "top top",
                                 scrub: 1,
@@ -83,7 +83,7 @@ export default function Home() {
                         gsap.to(".bot", {
                             scrollTrigger: {
                                 trigger: ".hero-main-container",
-                                start: "0vh top",
+                                start: "1vh top",
                                 endTrigger: "#About",
                                 end: "top top",
                                 scrub: 1,
