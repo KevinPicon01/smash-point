@@ -453,9 +453,9 @@ export default function Home() {
           <div>
 
               <img className="burger bot" alt="baja"
-                   src="/assets/images/burger/bot.png"/>
+                   src="/assets/images/burger/bot.webp"/>
               <img className="burger top" alt="top"
-                   src="/assets/images/burger/top.png"/>
+                   src="/assets/images/burger/top.webp"/>
           </div>
 
           <FloatingDockD/>

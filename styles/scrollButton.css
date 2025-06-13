@@ -10,6 +10,11 @@
     z-index: 1000;
     border-radius: 10%;
 }
+.icon-wpp{
+    color:white;
+    width: 60%;
+    height: 60%;
+}
 .wpp-button{
     border-radius: 10%;
     font-size: 18px;
@@ -21,7 +26,10 @@
     width: 50px;
     height: 50px;
     margin: 0;
-    background: #25d366;
+    background: #009866;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wpp-button.show {

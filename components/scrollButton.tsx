@@ -1,6 +1,9 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import '../styles/scrollButton.css';
+import {
+    IconBrandWhatsapp,
+} from "@tabler/icons-react";
 
 const ScrollButton = () => {
     // Estado para controlar la visibilidad del botón
@@ -42,8 +45,7 @@ const ScrollButton = () => {
                 className={`wpp-button ${visible ? 'show' : 'show'} ` }
                 onClick={wppClick}
             >
-                <img loading="lazy" alt="whatsapp logo" className="bg-emerald-600 rounded-md"
-                     src="/assets/images/whatsapp.png"/>
+                <IconBrandWhatsapp className="icon-wpp"/>
             </button>
         </div>
 
